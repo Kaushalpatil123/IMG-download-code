@@ -281,24 +281,6 @@ function ReactTable({ columns, data, renderRowSubComponent, handleAdd, setUserDa
     return filteredData.slice(firstPageIndex, lastPageIndex);
   }, [currentPage, filteredData]);
 
-//  const handleDownload = (url) => {
-//    // Check if url is an array and extract the first element if it is
-//    if (Array.isArray(url)) {
-//      url = url[0];
-//    }
-
-//    if (typeof url !== 'string') {
-//      console.error('Invalid URL:', url);
-//      return;
-//    }
-
-//    const a = document.createElement('a');
-//    a.href = url;
-//    a.download = url.split('/').pop(); // Set the download attribute with the image name
-//    document.body.appendChild(a);
-//    a.click();
-//    document.body.removeChild(a);
-  //  };
   const handleDownload = async (url) => {
     if (Array.isArray(url)) {
       url = url[0];
